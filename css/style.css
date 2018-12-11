@@ -51,6 +51,7 @@ body {
 .heading-primary {
     color: white;
     text-transform: uppercase;
+    backface-visibility: hidden; /* This is to fix the 'shakiness' of the animation */
 }
 
 .heading-primary-main {
@@ -59,8 +60,8 @@ body {
     font-weight: 400;
     letter-spacing: 5px;
 
-    animation-name: moveFromLeft;
-    animation-duration: 1s;
+    animation: moveFromLeft 1s;
+
 }
 
 .heading-primary-after {
@@ -69,8 +70,7 @@ body {
     font-weight: 400;
     letter-spacing: 10px;
 
-    animation-name: moveFromRight;
-    animation-duration: 1s;
+    animation: moveFromRight 1s;
 }
 
 @keyframes moveFromLeft {
