@@ -1,0 +1,69 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Changes box model so that borders and paddings are no longer added to the total width or total heighth */
+}
+
+body {
+    font-family: "Lato", sans-serif; /* Use Lato; if it isnt available, default to sans-serif */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7; /* 1.7 times bigger than the predefined line height */
+    color: #777;
+    padding: 30px;
+}
+
+.header {
+    position: relative;
+    height: 95vh; /* 95% of the viewport height */
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+}
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 100px;
+}
+
+.heading-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Shift it 50% of the elements height and width */
+    text-align: center;
+}
+
+.heading-primary {
+    color: white;
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block; /* block elements occupy the entire width that they have available and they create line breaks after and before them */
+    font-size:  50px;
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+
+.heading-primary-after {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 15px;
+}
