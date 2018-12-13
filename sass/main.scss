@@ -2,67 +2,20 @@
    Portfolio Project
 */
 
-$primary-color: #55c57a;
-$light-color:  #7ed56f;
-$dark-color: #28b485;
-$white-color: #ffff;
-$black-color: #000;
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Changes box model so that borders and paddings are no longer added to the total width or total heighth */
-}
+@import "./base/base";
+@import "./base/animations";
+@import "./base/typography";
+@import "./base/utilities";
 
-body {
-    font-family: "Lato", sans-serif; /* Use Lato; if it isnt available, default to sans-serif */
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.7; /* 1.7 times bigger than the predefined line height */
-    color: #777;
-    padding: 30px;
-}
+@import "./pages/home";
 
-.header {
-    position: relative;
-    height: 95vh; /* 95% of the viewport height */
-    background-image: linear-gradient(to right bottom, rgba($light-color, 0.8), rgba($dark-color, 0.8)), url(../img/hero.jpg);
-    background-size: cover;
-    background-position: top;
+@import "./components/button";
 
-    &-heading-container { // Remember that the '&' symbol copies the parent so  '&-jaimie' would be '.header-jaimie'
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /* Shift it 50% of the elements height and width */
-        text-align: center;
-    }
-
-    &-heading-primary {
-        color: $white-color;
-        text-transform: uppercase;
-        backface-visibility: hidden; /* This is to fix the 'shakiness' of the animation */
-        margin-bottom: 60px;
-
-        &-main {
-            display: block; /* block elements occupy the entire width that they have available and they create line breaks after and before them */
-            font-size:  50px;
-            font-weight: 400;
-            letter-spacing: 5px;
-    
-            animation: moveFromLeft 1s;
-        }
-
-        &-after {
-            display: block;
-            font-size: 20px;
-            font-weight: 400;
-            letter-spacing: 10px;
-        
-            animation: moveFromRight 1s;
-        }
-    }
-}
+@import "./layout/header";
 
 /* .logo-box {
     position: absolute;
@@ -74,100 +27,3 @@ body {
     height: 100px;
 } */
 
-@keyframes moveFromLeft {
-    0% { /* This is when the animation starts */
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-
-    80% {
-        transform: translateX(20px);
-    }
-
-    100% { /* This is when the animation ends */
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes moveFromRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    80% {
-        transform: translateX(-20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes moveFromBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-.btn {
-    &:link, &:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 15px 40px;
-        display: inline-block;
-        border-radius: 100px;
-        transition: all .2s;
-        position: relative;
-    }
-
-    &-white {
-        background-color: $white-color;
-        color: #777;
-
-        &::after {
-            background-color: $white-color;
-        }
-    }
-
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 15px  rgba($black-color, 0.2);
-
-        &::after {
-            transform: scale(1.5);
-            opacity: 0;
-        }
-    }
-
-    &:active {
-        transform: translateY(-1px);
-        box-shadow: 0 2px 10px rgba($black-color, 0.2)
-    }
-
-    &::after { // This is basically like a virtual element. The trick is to add an element behind the button
-        content: ""; /* Have to specify the content and display properties for the element to actually appear */
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 100px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1; /* Pushing the virtual element behind the original button */
-        transition: all 0.4s; /* Adds the smooth animation effect */
-    }
-
-    &-animated {
-        animation: moveFromBottom 0.5s ease-out 0.75s;
-        animation-fill-mode: backwards; // Makes button start off as being invisible 
-    }
-}

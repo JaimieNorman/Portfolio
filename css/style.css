@@ -1,6 +1,9 @@
 /* Author - Jaimie Norman
    Portfolio Project
 */
+/*
+    Author - Jaimie Norman
+*/
 * {
   margin: 0;
   padding: 0;
@@ -17,49 +20,6 @@ body {
   color: #777;
   padding: 30px; }
 
-.header {
-  position: relative;
-  height: 95vh;
-  /* 95% of the viewport height */
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top; }
-  .header-heading-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Shift it 50% of the elements height and width */
-    text-align: center; }
-  .header-heading-primary {
-    color: #ffff;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    /* This is to fix the 'shakiness' of the animation */
-    margin-bottom: 60px; }
-    .header-heading-primary-main {
-      display: block;
-      /* block elements occupy the entire width that they have available and they create line breaks after and before them */
-      font-size: 50px;
-      font-weight: 400;
-      letter-spacing: 5px;
-      animation: moveFromLeft 1s; }
-    .header-heading-primary-after {
-      display: block;
-      font-size: 20px;
-      font-weight: 400;
-      letter-spacing: 10px;
-      animation: moveFromRight 1s; }
-
-/* .logo-box {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-}s
-
-.logo {
-    height: 100px;
-} */
 @keyframes moveFromLeft {
   0% {
     /* This is when the animation starts */
@@ -134,3 +94,47 @@ body {
 .btn-animated {
   animation: moveFromBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
+
+.header {
+  position: relative;
+  height: 95vh;
+  /* 95% of the viewport height */
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top; }
+  .header-heading-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Shift it 50% of the elements height and width */
+    text-align: center; }
+  .header-heading-primary {
+    color: #ffff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    /* This is to fix the 'shakiness' of the animation */
+    margin-bottom: 60px; }
+    .header-heading-primary-main {
+      display: block;
+      /* block elements occupy the entire width that they have available and they create line breaks after and before them */
+      font-size: 50px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      animation: moveFromLeft 1s; }
+    .header-heading-primary-after {
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 10px;
+      animation: moveFromRight 1s; }
+
+/* .logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}s
+
+.logo {
+    height: 100px;
+} */
