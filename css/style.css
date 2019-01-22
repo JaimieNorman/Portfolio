@@ -11,14 +11,7 @@
   /* Changes box model so that borders and paddings are no longer added to the total width or total heighth */ }
 
 body {
-  font-family: "Lato", sans-serif;
-  /* Use Lato; if it isnt available, default to sans-serif */
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  /* 1.7 times bigger than the predefined line height */
-  color: #777;
-  padding: 30px; }
+  box-sizing: border-box; }
 
 @keyframes moveFromLeft {
   0% {
@@ -49,6 +42,36 @@ body {
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+body {
+  font-family: "Lato", sans-serif;
+  /* Use Lato; if it isnt available, default to sans-serif */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  /* 1.7 times bigger than the predefined line height */
+  color: #777;
+  padding: 30px; }
+
+.secondary-heading {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent; }
+
+.center-text {
+  text-align: center; }
+
+.margin-bottom-gap {
+  margin-bottom: 8rem; }
+
+.about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -128,6 +151,21 @@ body {
       font-weight: 400;
       letter-spacing: 10px;
       animation: moveFromRight 1s; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 6rem; }
+  .row .col-1-of-2 {
+    float: left;
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
 
 /* .logo-box {
     position: absolute;
