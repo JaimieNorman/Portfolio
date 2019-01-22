@@ -1,0 +1,53 @@
+.btn {
+    &:link, &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: relative;
+    }
+
+    &-white {
+        background-color: $white-color;
+        color: #777;
+
+        &::after {
+            background-color: $white-color;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px  rgba($black-color, 0.2);
+
+        &::after {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 10px rgba($black-color, 0.2)
+    }
+
+    &::after { // This is basically like a virtual element. The trick is to add an element behind the button
+        content: ""; /* Have to specify the content and display properties for the element to actually appear */
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Pushing the virtual element behind the original button */
+        transition: all 0.4s; /* Adds the smooth animation effect */
+    }
+
+    &-animated {
+        animation: moveFromBottom 0.5s ease-out 0.75s;
+        animation-fill-mode: backwards; // Makes button start off as being invisible 
+    }
+}
