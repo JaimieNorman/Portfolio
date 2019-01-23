@@ -10,9 +10,6 @@
   box-sizing: border-box;
   /* Changes box model so that borders and paddings are no longer added to the total width or total heighth */ }
 
-html {
-  font-size: 62.5%; }
-
 body {
   box-sizing: border-box; }
 
@@ -73,16 +70,13 @@ body {
 .paragraph {
   font-size: 1.6rem; }
   .paragraph:not(:last-child) {
-    margin-bottom: 3rem; }
+    margin: 3rem; }
 
 .center-text {
   text-align: center; }
 
-.margin-bottom-h1 {
+.margin-bottom-gap {
   margin-bottom: 8rem; }
-
-.margin-bottom-h3 {
-  margin-bottom: 1.5rem; }
 
 .about {
   background-color: #f7f7f7;
@@ -90,7 +84,6 @@ body {
   margin-top: -20vh; }
 
 .btn:link, .btn:visited {
-  font-size: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
@@ -135,25 +128,6 @@ body {
   animation: moveFromBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
-.btn-text:link, .btn-text:visited {
-  color: #55c57a;
-  display: inline-block;
-  text-decoration: none;
-  border-bottom: 1px solid #55c57a;
-  padding: 3px;
-  font-size: 1.6rem;
-  transition: all .2s; }
-
-.btn-text:active {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  transform: translateY(-1px); }
-
-.btn-text:hover {
-  background-color: #55c57a;
-  color: white;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  transform: translateY(-3px); }
-
 .header {
   position: relative;
   height: 95vh;
@@ -190,29 +164,8 @@ body {
 
 .row {
   max-width: 114rem;
+  background-color: #eee;
   margin: 0 auto; }
-  .row::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .row [class^="col-"] {
-    float: left; }
-    .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
-  .row:not(:last-child) {
-    margin-bottom: 8rem; }
-  .row .col-1-of-2 {
-    width: calc((100% - 6rem) / 2); }
-  .row .col-1-of-3 {
-    width: calc((100% - 2 * 6rem) / 3); }
-  .row .col-2-of-3 {
-    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
-  .row .col-1-of-4 {
-    width: calc((100% - 3 * 6rem) / 4); }
-  .row .col-2-of-4 {
-    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
-  .row .col-3-of-4 {
-    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 /* .logo-box {
     position: absolute;
