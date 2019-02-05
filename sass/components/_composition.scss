@@ -1,7 +1,7 @@
 .composition {
     position: relative; // Because the child is absolute. Remember that the parent needs to be relative if the child is absolute
     &__photo {
-        width: 55%;
+        width: 57%;
         box-shadow: 0 1.5rem 4rem rgba($black-color, .4);
         border-radius: 1.5px;
         position: absolute;

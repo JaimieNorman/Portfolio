@@ -217,7 +217,7 @@ body {
 .composition {
   position: relative; }
   .composition__photo {
-    width: 55%;
+    width: 57%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     border-radius: 1.5px;
     position: absolute;
