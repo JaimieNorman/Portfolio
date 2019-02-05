@@ -6,3 +6,27 @@ body {
     color: #777;
     padding: 30px;
 }
+
+.secondary-heading {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $light-color, $dark-color);
+    display: inline-block; // This is to make the background stop when the text stops, instead of filling the whole width of the block
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.tertiary-heading {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
