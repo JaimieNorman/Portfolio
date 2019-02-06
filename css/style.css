@@ -184,8 +184,7 @@ body {
     .composition__photo:hover {
       transform: scale(1.03rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
-      z-index: 10;
-      outline: 1.5rem solid #55c57a; }
+      z-index: 10; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
 
@@ -283,7 +282,7 @@ body {
 
 .header {
   position: relative;
-  height: 95vh;
+  height: 100vh;
   /* 95% of the viewport height */
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
@@ -370,7 +369,18 @@ body {
     color: #55c57a;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
   .footer__copyright {
-    color: #eee; }
+    color: #eee;
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+    width: 80%;
+    float: right; }
+
+.separator {
+  position: relative;
+  height: 50vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top; }
 
 /* .logo-box {
     position: absolute;

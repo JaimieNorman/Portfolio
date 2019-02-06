@@ -49,5 +49,9 @@
 
     &__copyright {
         color: $light-grey-color-2;
+        border-top: 1px solid $light-grey-color-2;
+        padding-top: 2rem;
+        width: 80%;
+        float: right;
     }
 }
