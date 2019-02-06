@@ -1,0 +1,9 @@
+.separator {
+    position: relative;
+    height: 80vh;
+    background-image: linear-gradient(to right bottom, rgba($light-color, 0.8), rgba($dark-color, 0.8)), url(../img/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
