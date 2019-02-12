@@ -4,17 +4,59 @@ body {
     font-size: 16px;
     line-height: 1.7; /* 1.7 times bigger than the predefined line height */
     color: #777;
-    // padding: 30px;
+}
+
+.primary-heading {
+    color: $white-color;
+    text-transform: uppercase;
+    backface-visibility: hidden; /* This is to fix the 'shakiness' of the animation */
+    margin-bottom: 6rem;
+
+    
+
+    &-main {
+        display: block; /* block elements occupy the entire width that they have available and they create line breaks after and before them */
+        font-size:  5rem;
+        font-weight: 400;
+        letter-spacing: .5rem;
+
+        animation: moveFromLeft 1s;
+
+        @include respond(phone) {
+            letter-spacing: .3rem;
+        }
+    }
+
+    &-after {
+        display: block;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 10px;
+    
+        animation: moveFromRight 1s;
+
+        @include respond(phone) {
+            letter-spacing: .1rem;
+        }
+    }
 }
 
 .secondary-heading {
-    font-size: 3.5rem;
+    font-size: 4rem;
     text-transform: uppercase;
     font-weight: 700;
     background-image: linear-gradient(to right, $light-color, $dark-color);
     display: inline-block; // This is to make the background stop when the text stops, instead of filling the whole width of the block
     -webkit-background-clip: text;
     color: transparent;
+
+    @include respond(tablet-portrait) {
+        font-size: 3.5rem;
+    }
+
+    @include respond(phone) {
+        font-size: 3rem;
+    }
 }
 
 .tertiary-heading {
