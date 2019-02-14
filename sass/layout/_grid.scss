@@ -3,7 +3,7 @@
     margin: 0 auto;
 
     &:not(:last-child) {
-        margin-bottom: $vertical-gutter;
+        margin-bottom: 2rem;
 
         @include respond(tablet-portrait) {
             margin-bottom: 6rem;

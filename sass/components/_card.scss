@@ -55,17 +55,29 @@
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
         &-1 {
-            background-image: linear-gradient(to right bottom, $secondary-light-color, $secondary-dark-color), url(../img/work-image-1.png);
-
+            background-image: linear-gradient(to right bottom, $secondary-light-color, $secondary-dark-color), url(../img/work-image-1.jpg);
         }
 
         &-2 {
-            background-image: linear-gradient(to right bottom, $tertiary-light-color, $tertiary-dark-color), url(../img/work-image-1.png);
+            background-image: linear-gradient(to right bottom, $tertiary-light-color, $tertiary-dark-color), url(../img/android.jpg);
         }
 
         &-3 {
-            background-image: linear-gradient(to right bottom, $light-color, $dark-color), url(../img/work-image-1.png);
+            background-image: linear-gradient(to right bottom, $light-color, $dark-color), url(../img/bottle.jpg);
         }
+
+        &-4 {
+            background-image: linear-gradient(to right bottom, $secondary-light-color, $secondary-dark-color), url(../img/rqm.jpg);
+        }
+
+        &-5 {
+            background-image: linear-gradient(to right bottom, $tertiary-light-color, $tertiary-dark-color), url(../img/portfolio1.jpg);
+        }
+
+        &-6 {
+            background-image: linear-gradient(to right bottom, $light-color, $dark-color), url(../img/latest-portfolio.jpg);
+        }
+
     }
 
     &__heading {
@@ -137,10 +149,55 @@
     &__title {
         font-size: 2.5rem;
         text-transform: uppercase;
+        margin-top: 3rem;
     }
 
     &__more {
         font-size: 2rem;
-        font-weight: 100;
+        font-weight: 350;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: $white-color;
+            display: inline-block;
+            text-decoration: none;
+            padding: 3px;
+            font-size: $default-font-size;
+            transition: all .2s;
+        }
+
+        &:active {
+            box-shadow: 0 .5rem 1rem rgba($black-color, .15);
+            transform: translateY(-1px);
+        }
+
+        &-1 {
+            &:hover {
+                background-color: $secondary-dark-color;
+                color: white;
+                box-shadow: 0 1rem 2rem rgba($black-color, .15);
+                transform: translateY(-3px);
+            }
+        }
+
+        &-2 {
+            &:hover {
+                background-color: $tertiary-dark-color;
+                color: white;
+                box-shadow: 0 1rem 2rem rgba($black-color, .15);
+                transform: translateY(-3px);
+            }
+        }
+
+        &-3 {
+            &:hover {
+                background-color: $primary-color;
+                color: white;
+                box-shadow: 0 1rem 2rem rgba($black-color, .15);
+                transform: translateY(-3px);
+            }
+        }
     }
 }
