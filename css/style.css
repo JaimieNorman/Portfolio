@@ -12,6 +12,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -55,14 +64,46 @@ body {
   /* 1.7 times bigger than the predefined line height */
   color: #777; }
 
+.primary-heading {
+  color: #ffff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* This is to fix the 'shakiness' of the animation */
+  margin-bottom: 6rem; }
+  .primary-heading-main {
+    display: block;
+    /* block elements occupy the entire width that they have available and they create line breaks after and before them */
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: .5rem;
+    animation: moveFromLeft 1s; }
+    @media (max-width: 37.5em) {
+      .primary-heading-main {
+        letter-spacing: .3rem; } }
+  .primary-heading-after {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    animation: moveFromRight 1s; }
+    @media (max-width: 37.5em) {
+      .primary-heading-after {
+        letter-spacing: .1rem; } }
+
 .secondary-heading {
-  font-size: 3.5rem;
+  font-size: 4rem;
   text-transform: uppercase;
   font-weight: 700;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent; }
+  @media (max-width: 56.25em) {
+    .secondary-heading {
+      font-size: 3.5rem; } }
+  @media (max-width: 37.5em) {
+    .secondary-heading {
+      font-size: 3rem; } }
 
 .tertiary-heading {
   font-size: 1.6rem;
@@ -90,7 +131,7 @@ body {
 
 .work {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 20rem 0 5rem 0;
   margin-top: -10rem; }
 
 .btn:link, .btn:visited {
@@ -139,6 +180,10 @@ body {
   animation: moveFromBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
+@media (max-width: 56.25em) {
+  .btn-text {
+    margin-bottom: 3rem; } }
+
 .btn-text:link, .btn-text:visited {
   color: #55c57a;
   display: inline-block;
@@ -186,6 +231,9 @@ body {
       z-index: 10; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
+  @media (max-width: 56.25em) {
+    .composition {
+      margin-bottom: 3rem; } }
 
 .card {
   perspective: 150rem;
@@ -338,29 +386,19 @@ body {
     transform: translate(-50%, -50%);
     /* Shift it 50% of the elements height and width */
     text-align: center; }
-  .header-heading-primary {
-    color: #ffff;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    /* This is to fix the 'shakiness' of the animation */
-    margin-bottom: 60px; }
-    .header-heading-primary-main {
-      display: block;
-      /* block elements occupy the entire width that they have available and they create line breaks after and before them */
-      font-size: 50px;
-      font-weight: 400;
-      letter-spacing: 5px;
-      animation: moveFromLeft 1s; }
-    .header-heading-primary-after {
-      display: block;
-      font-size: 20px;
-      font-weight: 400;
-      letter-spacing: 10px;
-      animation: moveFromRight 1s; }
 
 .row {
   max-width: 114rem;
   margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -369,12 +407,24 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-  .row:not(:last-child) {
-    margin-bottom: 8rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+    @media (max-width: 75em) {
+      .row [class^="col-"] {
+        padding: 0 1rem; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
     width: calc((100% - 2 * 6rem) / 3); }
+    .row .col-1-of-3:not(:last-child) {
+      margin-bottom: 8rem; }
+      @media (max-width: 56.25em) {
+        .row .col-1-of-3:not(:last-child) {
+          margin-bottom: 6rem; } }
   .row .col-2-of-3 {
     width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
   .row .col-1-of-4 {
@@ -388,6 +438,9 @@ body {
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
@@ -398,6 +451,11 @@ body {
     border-top: 1px solid #eee;
     padding-top: 2rem;
     display: inline-block; }
+    @media (max-width: 56.25em) {
+      .footer__nav {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -418,6 +476,10 @@ body {
     padding-top: 2rem;
     width: 80%;
     float: right; }
+    @media (max-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        float: none; } }
 
 .separator {
   position: relative;

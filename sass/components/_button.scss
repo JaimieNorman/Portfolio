@@ -54,6 +54,11 @@
 }
 
 .btn-text {
+
+    @include respond(tablet-portrait) {
+        margin-bottom: 3rem;
+    }
+
     &:link,
     &:visited {
         color: $primary-color;

@@ -12,29 +12,4 @@
         transform: translate(-50%, -50%); /* Shift it 50% of the elements height and width */
         text-align: center;
     }
-
-    &-heading-primary {
-        color: $white-color;
-        text-transform: uppercase;
-        backface-visibility: hidden; /* This is to fix the 'shakiness' of the animation */
-        margin-bottom: 60px;
-
-        &-main {
-            display: block; /* block elements occupy the entire width that they have available and they create line breaks after and before them */
-            font-size:  50px;
-            font-weight: 400;
-            letter-spacing: 5px;
-    
-            animation: moveFromLeft 1s;
-        }
-
-        &-after {
-            display: block;
-            font-size: 20px;
-            font-weight: 400;
-            letter-spacing: 10px;
-        
-            animation: moveFromRight 1s;
-        }
-    }
 }

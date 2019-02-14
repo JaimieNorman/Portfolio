@@ -34,4 +34,8 @@
     &:hover &__photo:not(:hover) {
         transform: scale(.95);
     }
+
+    @include respond(tablet-portrait) {
+        margin-bottom: 3rem;
+    }
 }
