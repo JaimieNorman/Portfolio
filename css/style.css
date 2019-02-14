@@ -204,7 +204,12 @@ body {
   transform: translateY(-3px); }
 
 .btn-card {
-  margin-top: 10rem; }
+  margin-top: 1rem; }
+
+.disabled-button {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.6 !important; }
 
 .composition {
   position: relative; }
@@ -274,9 +279,9 @@ body {
     .card__image-1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/work-image-1.png); }
     .card__image-2 {
-      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/work-image-1.png); }
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/android.jpg); }
     .card__image-3 {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/work-image-1.png); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/bottle.jpg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -326,6 +331,31 @@ body {
   .card__more {
     font-size: 2rem;
     font-weight: 100; }
+  .card__link:link, .card__link:visited {
+    color: #ffff;
+    display: inline-block;
+    text-decoration: none;
+    padding: 3px;
+    font-size: 1.6rem;
+    transition: all .2s; }
+  .card__link:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px); }
+  .card__link-1:hover {
+    background-color: #ff7730;
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px); }
+  .card__link-2:hover {
+    background-color: #5643fa;
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px); }
+  .card__link-3:hover {
+    background-color: #55c57a;
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px); }
 
 .popup {
   height: 100vh;
