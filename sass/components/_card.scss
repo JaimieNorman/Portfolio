@@ -55,8 +55,7 @@
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
         &-1 {
-            background-image: linear-gradient(to right bottom, $secondary-light-color, $secondary-dark-color), url(../img/work-image-1.png);
-
+            background-image: linear-gradient(to right bottom, $secondary-light-color, $secondary-dark-color), url(../img/work-image-1.jpg);
         }
 
         &-2 {
@@ -66,6 +65,19 @@
         &-3 {
             background-image: linear-gradient(to right bottom, $light-color, $dark-color), url(../img/bottle.jpg);
         }
+
+        &-4 {
+            background-image: linear-gradient(to right bottom, $secondary-light-color, $secondary-dark-color), url(../img/rqm.jpg);
+        }
+
+        &-5 {
+            background-image: linear-gradient(to right bottom, $tertiary-light-color, $tertiary-dark-color), url(../img/portfolio1.jpg);
+        }
+
+        &-6 {
+            background-image: linear-gradient(to right bottom, $light-color, $dark-color), url(../img/latest-portfolio.jpg);
+        }
+
     }
 
     &__heading {
@@ -137,11 +149,12 @@
     &__title {
         font-size: 2.5rem;
         text-transform: uppercase;
+        margin-top: 3rem;
     }
 
     &__more {
         font-size: 2rem;
-        font-weight: 100;
+        font-weight: 350;
     }
 
     &__link {

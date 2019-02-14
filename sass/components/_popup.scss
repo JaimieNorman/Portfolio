@@ -20,7 +20,9 @@
         @include absoluteCenter;
 
         width: 65%;
-
+        @include respond(phone) {
+            
+        }
         background-color: $white-color;
         box-shadow: 0 2rem 4rem rgba(black, .2);
         border-radius: 3px;
